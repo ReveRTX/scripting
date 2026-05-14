@@ -11,7 +11,7 @@ sudo yum upgrade;
 sudo yum install java-21-amazon-corretto -y;
 sudo yum install jenkins -y;
 
-echo "Almost done...";
+echo "Almost done... Please wait...";
 sudo systemctl enable jenkins;
 sudo systemctl start jenkins;
 
