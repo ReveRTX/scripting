@@ -19,3 +19,20 @@ echo "Find the password on jenkinspass.txt";
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword >> /home/ec2-user/jenkinspass.txt;
 
 echo "Jenkins installed successfully";
+
+echo "Installing Terraform, please wait..";
+sudo yum install -y yum-utils shadow-utils;
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo;
+sudo yum install terraform;
+
+echo "Terraform installed successfully";
+
+echo "Installing ansible, please wait..";
+sudo yum install ansible -y;
+
+echo "Ansible installed successfully";
+
+echo "Update and upgrade packages one last time..";
+sudo yum update && sudo yum upgrade -y;
+
+echo "Installation finished: All tasks successful"
